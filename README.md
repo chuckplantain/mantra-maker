@@ -1,10 +1,13 @@
-# mantra-maker
-how hard can it be to produce mantras (just for fun)?
-Anything to promote self improvement is a good thing.
+# How to use
 
-By using a random mantra for a two time per day session. One will eventually
-stick or else, a random one is as good as any other.
-Currently, the technology is primitive, but, by using python libraries. Maybe
-I can fine-tune it. What am I saying?
+    # Python3
+    export FLASK_APP=src/app.py
+    flask run # then connect @localhost:5000
 
-This thing produces a mantra. AUM.
+# Use Value(s)
+
+The main function takes no input and produces a mantra, ready to use.
+
+## Additional Stuff...
+
+By using a random mantra in a fifteen minute session, twice a day, good results very well might come.
