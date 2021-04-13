@@ -1,5 +1,16 @@
 import random
 import string
+import sqlite3
+import datetime
+import ipdb
+
+con = sqlite3.connect('mantras.db')
+cur = con.cursor()
+cur.execute('''CREATE TABLE IF NOT EXISTS mantras
+               (date text, mantra text)''')
+
+
+# brap-da-sa
 
 vowels = list('aeiou')
 vowels.append('oo')
@@ -32,3 +43,9 @@ def main():
             new_word += '-'
         mantra += new_word
     return mantra
+# ipdb.set_trace()
+word = main()
+now = datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S')
+cur.execute("INSERT INTO mantras (mantra, date) VALUES (?, ?)", (word, now))
+con.commit()
+print(word)
